@@ -11,27 +11,35 @@ public class TextAnalyzer {
 
     public TextAnalyzer(TextRecognizer recognizer) {
         this.recognizer = recognizer;
-    }
 
-    // When using Latin script library
-//        TextRecognizer recognizer =
+        // When using Latin script library
+//        recognizer =
 //                TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS);
 
-    // When using Chinese script library
-//        TextRecognizer recognizer =
+        // When using Chinese script library
+//         recognizer =
 //                TextRecognition.getClient(new ChineseTextRecognizerOptions.Builder().build());
 //
 //// When using Devanagari script library
-//        TextRecognizer recognizer =
+//         recognizer =
 //                TextRecognition.getClient(new DevanagariTextRecognizerOptions.Builder().build());
 //
 //// When using Japanese script library
-//        TextRecognizer recognizer =
+//         recognizer =
 //                TextRecognition.getClient(new JapaneseTextRecognizerOptions.Builder().build());
 //
 //// When using Korean script library
-//        TextRecognizer recognizer =
+//         recognizer =
 //                TextRecognition.getClient(new KoreanTextRecognizerOptions.Builder().build());
+    }
+
+    /**
+     * Analyzes the provided bitmap image using a text recognizer and invokes the callback
+     * with the analysis result.
+     *
+     * @param bitmap   The bitmap image to be analyzed.
+     * @param callBack The callback to be invoked with the analysis result.
+     */
     public void analyze(Bitmap bitmap, AnalyzeCallBack callBack) {
         InputImage image = InputImage.fromBitmap(bitmap, 0);
 
